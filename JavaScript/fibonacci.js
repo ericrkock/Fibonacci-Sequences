@@ -10,9 +10,9 @@ function fibonacciLoop(index) {
     var fiboNew;
     var fiboPrev = 1;
     var fiboFirst = 0;
-    if (index < 2) return index;
+    if (index <= 1 && index >= 0) return index;
     for (let sequence = 2; sequence <= index; sequence++) {
-        fiboNew = fiboFirst + fiboPrev;
+        fiboNew = BigInt(fiboFirst) + BigInt(fiboPrev);
         fiboFirst = fiboPrev;
         fiboPrev = fiboNew;
     }
@@ -20,15 +20,14 @@ function fibonacciLoop(index) {
 }
 
 // 2.1 Recursion Way
-//console.log(fibonacciRecursion(10));
+//console.log(fibonacciRecursion(50));
 function fibonacciRecursion(index) {
-    if (index < 2) return index;
-    return fibonacciRecursion(index-1) + fibonacciRecursion(index-2);
+    if (index <= 1 && index >= 0) return index;
+    return (fibonacciRecursion(index-1)) + (fibonacciRecursion(index-2));
 };
 
 // 2.2 Recursion Way with memory
 const fibonacci = (() => {
-    
     const seq = [];
     return (n, num) => {
         if (n === num) return seq;
@@ -41,22 +40,20 @@ const getSequence = (num, i = 0) => {
     if (r = fibonacci(i, num)) return r;
     return getSequence(num, ++i);
 }
-console.log(getSequence(10)); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-
-
-
-
+//console.log(getSequence(10)); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
 
 // 3. Reduce function Way
-//console.log(fibonacciReduce(2));
-function fibonacciReduce(index) {
-    if (index < 2) return index;
-    return new Array(index).fill(1).reduce((arr, _ ,i) => {
-        arr.push((i <= 1) ? i : arr[i-2] + arr[i-1])
-        return arr
-    },[]) ;
-  }
-
+const fiboNElement = n => {
+    const arr = Array.from(Array(n), (_, k) => k);
+    const initialElement = [];
+    const reducer = (acc, currentValue) => {
+        return currentValue <= 1
+        ? [...acc, currentValue]
+        : [...acc, acc[acc.length - 1] + acc[acc.length - 2]];
+    };
+    return arr.reduce(reducer, initialElement);
+};
+console.log(fiboNElement(91));  
 
 // Factorial
 //console.log(factorial(5));
@@ -64,9 +61,3 @@ function factorial(n) {
     if (n < 2) return n;
     return n * factorial(n -1);
 }
-
-
-
-
-
- 
