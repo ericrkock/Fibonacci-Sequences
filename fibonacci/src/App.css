@@ -1,6 +1,52 @@
-.App {
-  text-align: center;
+:root {
+  --btn-calc: red;
+  --btn-reset: black;
+  --btn-txt: white;
+  --results: green;
 }
+
+.App {
+  margin: 2em;
+}
+
+.form-label {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.form-field {
+  text-align: left;
+  margin-left: 25px;
+  padding-left: 5px;
+}
+
+input {
+  margin-right: 5px;
+  width: 50px;
+}
+
+button {
+  color: var(--btn-txt);
+  background-color: var(--btn-calc);
+}
+
+#btn-reset {
+  background-color: var(--btn-reset) !important;
+  margin-left: 35px;
+}
+
+#resultLoopWay {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10px;
+  color: var(--results);
+}
+
+
+
+
+
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

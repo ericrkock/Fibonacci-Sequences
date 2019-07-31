@@ -1,9 +1,3 @@
-// Calculate the Fibonacci Sequences in Javascript - 3 Ways
-// 1. Simple Way - Loop
-// 2. Recursion Way
-// 3. Reduced Way
-// ========================================================
-
 // 1. Simple Way
 //console.log(fibonacciLoop(101));
 function fibonacciLoop(index) {
