@@ -1,7 +1,6 @@
 import React from 'react';
 //mport logo from './logo.svg';
 import './App.css';
-import './calculations.js';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
               <legend> Give an index for each way </legend>
               <p className="form-label">1. SIMPLE LOOP WAY</p>
                 <input className="form-field" type="text" placeholder="index ?" />
-                <button onClick="fiboLoop()" class="loopWay" type="submit">Calculate</button>
+                {/* <button onClick={fiboLoop()} class="loopWay" >Calculate</button> */}
                 <result id="resultLoopWay">Loop Way</result>
                 <button type="submit">Reset Index</button>
               <p className="form-label">2. RECURSION WAY</p>
@@ -37,4 +36,3 @@ function App() {
 }
 
 export default App;
-// https://www.youtube.com/watch?v=VIqVW9XiWnk Form video
