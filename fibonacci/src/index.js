@@ -1,8 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Display from './Display';
+import CalcButtons from './CalcButtons';
 import * as serviceWorker from './serviceWorker';
+
+const App = function() {   // Can also be const App = () => { }
+   return (
+      <div className="displaybox">
+         <CalcButtons>
+            <Display 
+               way = "1. Loop "
+               index = "10"
+               result="Loop result"
+            />
+         </CalcButtons>
+         <CalcButtons>
+            <Display 
+               way = "2. Recursion "
+               index = "15"
+               result="Recursion result"
+            />
+         </CalcButtons>
+         <CalcButtons>
+            <Display 
+               way = "3. Reduce "
+               index = "20"
+               result="Reduce result"
+            />
+         </CalcButtons>  
+      </div>
+   );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

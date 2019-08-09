@@ -10,4 +10,56 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  color: white;
+}
+
+.displaybox {
+  width: 400px;
+  height: 200px;
+  align-self: auto;
+  background-color: black;
+}
+
+.displayway {
+  margin-bottom: auto;
+  color: white;
+}
+
+.theway {
+  padding-right: 2px;
+}
+
+.index {
+  padding-right: 5px;
+}
+
+.result {
+  padding-left: 20px;
+  color: lightgreen;
+  font-size: 10px;
+}
+
+.buttoncard {
+  margin-top: 10px;
+  margin-left: 10px
+}
+
+.buttons {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.green-calculate {
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: green;
+  color: white;
+}
+
+.red-reset-index {
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: red;
+  color: white;
 }
