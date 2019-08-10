@@ -1,6 +1,16 @@
 import React from 'react';
 
-const Display = function(props) {
+const Display = function() {
+   return (
+      <div className="resultaat">
+         <input type="text" name="index" placeholder="Index" />
+         <span>Result</span>
+         <span>Time Stamp</span>
+      </div>
+   );
+}
+
+/* const Display = function(props) {
    return (
       <div className="displayway">
          <div>
@@ -10,6 +20,6 @@ const Display = function(props) {
          </div>
       </div>
    );
-};
+}; */
 
 export default Display;

@@ -1,65 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+html {
+  background-color: darkolivegreen;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-  color: white;
+body {
+  margin: 30px 50px;
 }
 
 .displaybox {
-  width: 400px;
-  height: 200px;
-  align-self: auto;
-  background-color: black;
+  display: flex;
+  align-content: center;
+  width: 450px;
+  height: 100px;
+  background-color: lightblue;
 }
 
-.displayway {
-  margin-bottom: auto;
-  color: white;
+h3 {
+  text-align: center;
 }
 
-.theway {
-  padding-right: 2px;
+input {
+  width: 75px;
+  text-align: center;
 }
 
-.index {
-  padding-right: 5px;
-}
-
-.result {
-  padding-left: 20px;
-  color: lightgreen;
-  font-size: 10px;
-}
-
-.buttoncard {
-  margin-top: 10px;
-  margin-left: 10px
-}
-
-.buttons {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-.green-calculate {
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: green;
-  color: white;
-}
-
-.red-reset-index {
+Button {
   margin-left: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  background-color: red;
-  color: white;
 }
+

@@ -1,12 +1,14 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button'; 
 
-const CalcButtons = function(props) {
+const CalcButtons = function() {
    return (
       <div className="buttoncard">
-         <div className="calcways">{props.children}</div>
-         <div className="buttons">
-            <span className="green-calculate">Calculate</span>
-            <span className="red-reset-index">Reset</span>
+         <div>
+            <Button variant="success">Loop Way</Button>
+            <Button variant="success">Recursion Way</Button>
+            <Button variant="success">Reduce Way</Button>
+            <Button variant="warning">Reset</Button>
          </div>
       </div>
    );
