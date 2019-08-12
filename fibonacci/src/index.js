@@ -8,7 +8,6 @@ class App extends React.Component {
    render () {
       return (
          <div className="displaybox">
-
             <div>
                <div><h3>3 Ways to calculate Fibonacci Sequences</h3></div>
                <div><Display /></div>
