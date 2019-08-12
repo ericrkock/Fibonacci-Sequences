@@ -7,12 +7,9 @@
 // ================= //
 
 // Add 3 EvenListeners to Buttons and ENTER key
-document.querySelector(".loopWay").addEventListener("click", fiboLoop);
-document.addEventListener("keypress", function(event) {if (event.keyCode === 13 || event.which === 13) {fiboLoop()}});
 
 
-function fiboLoop() {
-   let index = document.querySelector("#loop").value;
+function fiboLoop(index) {
    var fiboNew;
    var fiboPrev = 1;
    var fiboFirst = 0;
