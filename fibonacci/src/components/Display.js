@@ -9,11 +9,9 @@ class Display extends React.Component {
    render () {
       return (
          <div className="index">
-            <div>
-               <span><IndexBar onSubmit={this.onIndexSubmit}/></span>
-               <span className="result">Sequence Result</span>
-               <span className="stamp">Time Stamp</span>
-            </div>
+            <span><IndexBar onSubmit={this.onIndexSubmit}/></span>
+            <span className="result">Sequence Result</span>
+            <span className="stamp">Time Stamp</span>
          </div>
       );
    }
