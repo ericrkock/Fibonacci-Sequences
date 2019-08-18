@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'; 
-//import FiboLoop from "./FiboLoop";
+import Display from './Display';
 
 class CalcButtons extends React.Component {
    wayLoop(index) {
@@ -15,13 +15,16 @@ class CalcButtons extends React.Component {
           fiboFirst = fiboPrev;
           fiboPrev = fiboNew;
       }
-      console.log("Calculation: ", fiboNew);
-      return fiboNew;
+      //this.setState({ result: fiboNew});
+      //console.log("Calculation: ", fiboNew);
+      //return this.result;
       
    }
 
-   wayRecursion() {
+   wayRecursion(index) {
       console.log("Recursion Way Calculation");
+      if (index <= 1 && index >= 0) return index;
+      //return wayRecursion(index-1) + wayRecursion(index-2);
    }
 
    wayReduce() {
@@ -34,11 +37,16 @@ class CalcButtons extends React.Component {
 
    render () {
       return (
-         <div className="buttoncard">
-            <Button variant="success" onClick={this.wayLoop}>Loop Way</Button>
-            <Button variant="success" onClick={this.wayRecursion}>Recursion Way</Button>
-            <Button variant="success" onClick={this.wayReduce}>Reduce Way</Button>
-            <Button variant="warning" onClick={this.resetIndex}>Reset</Button>
+         <div>
+            <Display />
+            <div className="buttoncard">
+               <div className="buttonset">
+                  <Button variant="success" onClick={this.wayLoop}>Loop Way</Button>
+                  <Button variant="success" onClick={this.wayRecursion}>Recursion Way</Button>
+                  <Button variant="success" onClick={this.wayReduce}>Reduce Way</Button>
+                  <Button variant="warning" onClick={this.resetIndex}>Reset</Button>
+               </div>
+            </div>
          </div>
       );
    }

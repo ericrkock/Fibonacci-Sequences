@@ -9,8 +9,8 @@
   --orange: #ff5900;
 
   --alert: red;
-  --border: black;
-  --shadow: 0 10px 25px #595959;
+  --border: #222;
+  --shadow: 0 10px 25px #666;
 }
 
 /* == Main Tags == */
@@ -57,22 +57,24 @@ h3 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 5px;
+  border: 20px;
   border-style: solid;
   border-color: var(--border);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   box-shadow: var(--shadow);
 }
 
 label {
   color: var(--orange);
-  padding-right: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 input {
   width: 75px;
-  margin-left: 5px;
+  margin-left: 7px;
   text-align: center;
   font-weight: 700;
   color: var(--blue);
@@ -99,12 +101,12 @@ input {
 }
 
 .buttoncard {
-  /*background-color: #FFF;*/
+  background-color: var(--border);
   position: fixed;
-  width: 96%;
+  width: 100%;
   height: 100px;
   right: 0px;
-  bottom: -2px;
+  bottom: 0px;
   left: 0px;
   padding-left: 20px;
   border: 2px;
@@ -112,8 +114,14 @@ input {
   border-color: var(--border);
 }
 
+.buttonset {
+  display: block;
+  max-width: 485px;
+  margin: auto;
+  padding-top: 30px;
+}
+
 Button {
-  margin-top: 5px;
   margin-right: 20px;
 }
 

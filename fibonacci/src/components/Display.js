@@ -2,14 +2,21 @@ import React from 'react';
 import IndexBar from './IndexBar';
 
 class Display extends React.Component {
-   onIndexSubmit(index) {
-      console.log("Index: ", index);
+   constructor(props) {
+      super(props);
+      this.state = { index: ''};
+      this.handleChange = this.handleChange.bind(this);
    }
 
-   render () {
+   handleChange(event) {
+      this.setState({ index: event.target.value});
+      console.log("onChange: ", event.target.value);
+   }
+
+    render () {
       return (
          <div className="index">
-            <span><IndexBar onSubmit={this.onIndexSubmit}/></span>
+            <IndexBar input={this.state.index} handleChange={this.handleChange} />
             <span className="result">Sequence Result</span>
             <span className="stamp">Time Stamp</span>
          </div>

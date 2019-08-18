@@ -1,7 +1,11 @@
 import React from 'react';
 
 class IndexBar extends React.Component {
-   state = { index: ""}; 
+   //state = { index: ''}; 
+
+   constructor(props) {
+      super(props);
+   };
 
    onFormSubmit = (event) => {
       event.preventDefault();
@@ -13,11 +17,11 @@ class IndexBar extends React.Component {
          <div>
             <form onSubmit={this.onFormSubmit}>
                <div className="field">
-                  <label>Index to calculate?: </label>
+                  <label>Index to calculate >></label>
                   <input 
                      type="text" 
-                     value={this.state.index}
-                     onChange = {(e) => this.setState({ index: e.target.value})}
+                     value={this.props.input}
+                     onChange={this.props.handleChange}
                   />
                </div>
             </form>
