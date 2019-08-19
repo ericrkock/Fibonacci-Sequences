@@ -1,13 +1,22 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'; 
 
+var seq
 class CalcButtons extends React.Component {
    constructor(props) {
       super(props);
    }
 
-   wayLoop(index) {
-      console.log("Loop Way Calculation", index);
+   onClickLoop = () => {this.wayLoop(this.props.toCalc)}
+   onClickRecursion = () => {this.wayRecursion(this.props.toCalc)}
+   onClickReduce = () => {this.wayReduce(this.props.toCalc)}
+
+   handleResult = () => {
+      this.props.result(seq);
+      console.log("Handle Result");
+   }
+
+   wayLoop = (index) => {
       var fiboNew;
       var fiboPrev = 1;
       var fiboFirst = 0;
@@ -18,37 +27,35 @@ class CalcButtons extends React.Component {
           fiboFirst = fiboPrev;
           fiboPrev = fiboNew;
       }
-      //this.setState({ result: fiboNew});
-      //console.log("Calculation: ", fiboNew);
-      //return this.result;
-      
+      seq = fiboNew;
+      console.log("Loop Way Calculation", index, seq);
    }
 
-   wayRecursion(index) {
+   wayRecursion = (index) => {
       console.log("Recursion Way Calculation", index);
       if (index <= 1 && index >= 0) return index;
-      //this.setState.result(wayRecursion(index-1) + wayRecursion(index-2));
+      //this.setState({result: (wayRecursion(index-1) + wayRecursion(index-2))});
    }
 
-   wayReduce(index) {
+   wayReduce = (index) => {
       console.log("Reduce Way Calculation", index);
    }
 
-   resetIndex() {
-      console.log("Reset Index Input");
-      this.setState.index('');
-      this.setState.result('Sequence Result');
-      this.setState.stamp('Time Stamp');
+   resetIndex = () => {
+      seq = "Reset Index Input";
+      console.log("Reset Index Input", seq);
    }
  
+
+
    render () {
       return (
          <div>
             <div className="buttoncard">
                <div className="buttonset">
-                  <Button variant="success" onClick={this.wayLoop}>Loop Way</Button>
-                  <Button variant="success" onClick={this.wayRecursion}>Recursion Way</Button>
-                  <Button variant="success" onClick={this.wayReduce}>Reduce Way</Button>
+                  <Button variant="success" onClick={this.onClickLoop}>Loop Way</Button>
+                  <Button variant="success" onClick={this.onClickRecursion}>Loop Way</Button>
+                  <Button variant="success" onClick={this.onClickReduce}>Reduce Way</Button>
                   <Button variant="warning" onClick={this.resetIndex}>Reset</Button>
                </div>
             </div>

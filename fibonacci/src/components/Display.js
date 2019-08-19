@@ -7,8 +7,9 @@ class Display extends React.Component {
       super(props);
       this.state = { 
          index: '',
-         result: '',
-         stamp: ''};
+         toCalc: '',
+         result: 'Sequence Result',
+         stamp: 'Time Stamp'};
       this.handleChange = this.handleChange.bind(this);
    }
 
@@ -21,9 +22,13 @@ class Display extends React.Component {
       return (
          <div className="index">
             <IndexBar input={this.state.index} handleChange={this.handleChange} />
-            <span className="result">Sequence Result</span>
-            <span className="stamp">Time Stamp</span>
-            <CalcButtons />
+            <span className="result">{this.state.result}</span>
+            <span className="stamp">{this.state.stamp}</span>
+            <CalcButtons 
+               toCalc={this.state.index} 
+               result={this.handleResult}
+               stamp={this.state.stamp}
+            />
          </div>
       );
    }
