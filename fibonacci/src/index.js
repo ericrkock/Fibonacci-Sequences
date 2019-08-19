@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-//import Display from './components/Display';
-import CalcButtons from './components/CalcButtons';
+import Display from './components/Display';
+//import CalcButtons from './components/CalcButtons';
 
 class App extends React.Component {
    render () {
@@ -17,8 +17,8 @@ class App extends React.Component {
             
             <div className="displaybox">
                <h3>3 Ways to calculate the sequences</h3>
-               {/*<div><Display /></div>*/}
-               <div><CalcButtons /></div>
+               <div><Display /></div>
+               {/*<div><CalcButtons /></div>*/}
             </div>
          
             <div className="footer">

@@ -1,8 +1,11 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'; 
-import Display from './Display';
 
 class CalcButtons extends React.Component {
+   constructor(props) {
+      super(props);
+   }
+
    wayLoop(index) {
       console.log("Loop Way Calculation", index);
       var fiboNew;
@@ -22,23 +25,25 @@ class CalcButtons extends React.Component {
    }
 
    wayRecursion(index) {
-      console.log("Recursion Way Calculation");
+      console.log("Recursion Way Calculation", index);
       if (index <= 1 && index >= 0) return index;
-      //return wayRecursion(index-1) + wayRecursion(index-2);
+      //this.setState.result(wayRecursion(index-1) + wayRecursion(index-2));
    }
 
-   wayReduce() {
-      console.log("Reduce Way Calculation");
+   wayReduce(index) {
+      console.log("Reduce Way Calculation", index);
    }
 
    resetIndex() {
       console.log("Reset Index Input");
+      this.setState.index('');
+      this.setState.result('Sequence Result');
+      this.setState.stamp('Time Stamp');
    }
-
+ 
    render () {
       return (
          <div>
-            <Display />
             <div className="buttoncard">
                <div className="buttonset">
                   <Button variant="success" onClick={this.wayLoop}>Loop Way</Button>
