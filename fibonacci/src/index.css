@@ -1,8 +1,7 @@
-
 :root {
   --theme: #f7eacb;
   --text: #999;
-  --light: #FFF;
+  --light: #fff;
   --dark: #333;
 
   --blue: #1c4b77;
@@ -40,7 +39,7 @@ h3 {
   text-transform: uppercase;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
 
 .divide-line-header {
@@ -75,6 +74,7 @@ label {
 input {
   width: 75px;
   margin-left: 7px;
+  margin-bottom: 10px;
   text-align: center;
   font-weight: 700;
   color: var(--blue);
@@ -88,7 +88,6 @@ input {
 
 .result {
   color: var(--light);
-  /*padding-left: 10px;*/
   font-weight: 700;
 }
 
@@ -115,13 +114,13 @@ input {
 }
 
 .buttonset {
-  display: block;
+  display: flex;
   max-width: 485px;
   margin: auto;
-  padding-top: 30px;
+  padding-top: 35px;
 }
 
-Button {
+button {
   margin-right: 10px;
 }
 
