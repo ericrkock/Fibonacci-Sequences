@@ -7,9 +7,8 @@ class Display extends React.Component {
     super(props);
     this.state = {
       index: "",
-      toCalc: "",
       label: "Sequence Result",
-      result: "",
+      result: ""
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -19,10 +18,10 @@ class Display extends React.Component {
   }
 
   resetState = () => {
-    this.setState({ 
-      index: "", 
-      result: "", 
-      label: "Sequence Result" 
+    this.setState({
+      index: "",
+      result: "",
+      label: "Sequence Result"
     });
   };
 
@@ -40,49 +39,55 @@ class Display extends React.Component {
       }
       this.setState({
         result: fiboNew,
-        label: "The loop way result is "
+        label: "The loop way result is : "
       });
     } else {
-      console.log("Index field is empty");
+      this.setState({ label: "Index field is empty!" });
       //beep
     }
   };
 
-  recursionWay = () => {
-    console.log("Recursion Way Calculation", this.state.index);
-    console.log("recursionWay evoked");
-    if (this.state.index <= 1 && this.state.index >= 0) return this.state.index;
-
-    return (
-      this.recursionWay(this.state.index - 1) +
-      this.recursionWay(this.state.index - 2)
-    );
+  recursionWay = num => {
+    if (num <= 1 && num >= 0) return num;
+    return this.recursionWay(num - 1) + this.recursionWay(num - 2);
   };
 
   setRecursWay = () => {
-    console.log("setRec... Evoked");
-    this.setState({ result: this.recursionWay() });
+    if (this.state.index !== "") {
+      this.setState({
+        label:
+          "Hold on! ... the calculation can take up to more than 15 minutes ..."
+      });
+      const recursionResult = this.recursionWay(parseInt(this.state.index));
+      this.setState({
+        label: "The recursion way is : ",
+        result: recursionResult
+      });
+    } else {
+      this.setState({ label: "Index field is empty!" });
+      //beep
+    }
   };
 
   reduceWay = () => {
-    const startValue = 1 + parseInt(this.state.index);
-    const arr = Array.from(Array(startValue), (_, k) => k);
-    const initialElement = [];
-    
-    const reducer = (acc, currentValue) => {
-      return currentValue <= 1
-        ? [...acc, currentValue]
-        : [...acc, acc[acc.length - 1] + acc[acc.length - 2]];
-    };
-
-    const newArr = arr.reduce(reducer, initialElement);
-
-    console.log("reducer: ", newArr[11]);
-    
-    this.setState({
-      result: arr.reduce(reducer, initialElement),
-      label: "The reduce way result is "
-    });
+    if (this.state.index !== "") {
+      const startValue = 1 + parseInt(this.state.index);
+      const arr = Array.from(Array(startValue), (_, k) => k);
+      const initialElement = [];
+      const reducer = (acc, currentValue) => {
+        return currentValue <= 1
+          ? [...acc, currentValue]
+          : [...acc, acc[acc.length - 1] + acc[acc.length - 2]];
+      };
+      const newArr = arr.reduce(reducer, initialElement);
+      this.setState({
+        result: newArr[parseInt(this.state.index)],
+        label: "The reduce way result is : "
+      });
+    } else {
+      this.setState({ label: "Index field is empty!" });
+      //beep
+    }
   };
 
   render() {
