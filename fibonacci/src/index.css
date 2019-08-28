@@ -107,7 +107,6 @@ input {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  padding-left: 20px;
   border: 2px;
   border-style: solid;
   border-color: var(--border);
@@ -115,7 +114,7 @@ input {
 
 .buttonset {
   display: flex;
-  max-width: 485px;
+  max-width: 100%;
   margin: auto;
   padding-top: 35px;
 }

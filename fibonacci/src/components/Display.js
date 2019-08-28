@@ -47,12 +47,7 @@ class Display extends React.Component {
     }
   };
 
-  recursionWay = num => {
-    if (num <= 1 && num >= 0) return num;
-    return this.recursionWay(num - 1) + this.recursionWay(num - 2);
-  };
-
-  setRecursWay = () => {
+ setRecursWay = () => {
     if (this.state.index !== "") {
       this.setState({
         label:
@@ -67,6 +62,11 @@ class Display extends React.Component {
       this.setState({ label: "Index field is empty!" });
       //beep
     }
+  };
+
+  recursionWay = num => {
+    if (num <= 1 && num >= 0) return num;
+    return this.recursionWay(num - 1) + this.recursionWay(num - 2);
   };
 
   reduceWay = () => {
@@ -85,9 +85,27 @@ class Display extends React.Component {
         label: "The reduce way result is : "
       });
     } else {
-      this.setState({ label: "Index field is empty!" });
-      //beep
+        this.setState({ label: "Index field is empty!" });
+        //beep
     }
+  };
+
+  setFactorial = () => {
+    if (this.state.index !== "") {
+      const factorialResult = this.factorial(parseInt(this.state.index));
+      this.setState({
+        label: "The factorial way is : ",
+        result: factorialResult
+      });
+    } else {
+        this.setState({ label: "Index field is empty!" });
+        //beep
+    }
+  };
+  
+  factorial = num => {
+    if (num < 2) return num;
+    return num * this.factorial(num -1);
   };
 
   render() {
@@ -112,6 +130,11 @@ class Display extends React.Component {
               name={"Reduce Way"}
               variant={"success"}
               clicked={this.reduceWay}
+            />
+            <CalcButton
+              name={"Factorial"}
+              variant={"info"}
+              clicked={this.setFactorial}
             />
             <CalcButton
               name={"Reset"}
