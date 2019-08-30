@@ -47,7 +47,7 @@ class Display extends React.Component {
     }
   };
 
- setRecursWay = () => {
+  setRecursWay = () => {
     if (this.state.index !== "") {
       this.setState({
         label:
@@ -85,8 +85,8 @@ class Display extends React.Component {
         label: "The reduce way result is : "
       });
     } else {
-        this.setState({ label: "Index field is empty!" });
-        //beep
+      this.setState({ label: "Index field is empty!" });
+      //beep
     }
   };
 
@@ -98,20 +98,23 @@ class Display extends React.Component {
         result: factorialResult
       });
     } else {
-        this.setState({ label: "Index field is empty!" });
-        //beep
+      this.setState({ label: "Index field is empty!" });
+      //beep
     }
   };
-  
+
   factorial = num => {
     if (num < 2) return num;
-    return num * this.factorial(num -1);
+    return num * this.factorial(num - 1);
   };
 
   render() {
     return (
       <div className="index">
-        <IndexBar input={this.state.index} handleChange={this.handleChange} />
+        <IndexBar
+          input={this.state.index}
+          handleChange={this.handleChange}
+        />
         <span className="result">{this.state.label}</span>
         <span className="result">{this.state.result}</span>
         <div className="buttoncard">
