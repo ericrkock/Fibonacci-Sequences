@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/github.io/Fibonacci-Sequences/fibonacci/static/css/main.3df42558.chunk.css",
-    "main.js": "/github.io/Fibonacci-Sequences/fibonacci/static/js/main.a4653149.chunk.js",
-    "main.js.map": "/github.io/Fibonacci-Sequences/fibonacci/static/js/main.a4653149.chunk.js.map",
-    "runtime~main.js": "/github.io/Fibonacci-Sequences/fibonacci/static/js/runtime~main.5fce158c.js",
-    "runtime~main.js.map": "/github.io/Fibonacci-Sequences/fibonacci/static/js/runtime~main.5fce158c.js.map",
-    "static/js/2.bf7db7a3.chunk.js": "/github.io/Fibonacci-Sequences/fibonacci/static/js/2.bf7db7a3.chunk.js",
-    "static/js/2.bf7db7a3.chunk.js.map": "/github.io/Fibonacci-Sequences/fibonacci/static/js/2.bf7db7a3.chunk.js.map",
-    "index.html": "/github.io/Fibonacci-Sequences/fibonacci/index.html",
-    "precache-manifest.9ccfe8dc5f0598c8101afbce1a7ca54d.js": "/github.io/Fibonacci-Sequences/fibonacci/precache-manifest.9ccfe8dc5f0598c8101afbce1a7ca54d.js",
-    "service-worker.js": "/github.io/Fibonacci-Sequences/fibonacci/service-worker.js",
-    "static/css/main.3df42558.chunk.css.map": "/github.io/Fibonacci-Sequences/fibonacci/static/css/main.3df42558.chunk.css.map"
+    "main.css": "/github.io/Fibonacci-Sequences/static/css/main.98b1c9bd.chunk.css",
+    "main.js": "/github.io/Fibonacci-Sequences/static/js/main.895724ff.chunk.js",
+    "main.js.map": "/github.io/Fibonacci-Sequences/static/js/main.895724ff.chunk.js.map",
+    "runtime~main.js": "/github.io/Fibonacci-Sequences/static/js/runtime~main.0686ec93.js",
+    "runtime~main.js.map": "/github.io/Fibonacci-Sequences/static/js/runtime~main.0686ec93.js.map",
+    "static/js/2.bf7db7a3.chunk.js": "/github.io/Fibonacci-Sequences/static/js/2.bf7db7a3.chunk.js",
+    "static/js/2.bf7db7a3.chunk.js.map": "/github.io/Fibonacci-Sequences/static/js/2.bf7db7a3.chunk.js.map",
+    "index.html": "/github.io/Fibonacci-Sequences/index.html",
+    "precache-manifest.90c9f445e72a2937a1180e2ddc10e62b.js": "/github.io/Fibonacci-Sequences/precache-manifest.90c9f445e72a2937a1180e2ddc10e62b.js",
+    "service-worker.js": "/github.io/Fibonacci-Sequences/service-worker.js",
+    "static/css/main.98b1c9bd.chunk.css.map": "/github.io/Fibonacci-Sequences/static/css/main.98b1c9bd.chunk.css.map"
   }
 }
